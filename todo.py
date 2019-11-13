@@ -17,12 +17,20 @@ add_todo("feed the cat")
 print(todo_list)
 
 # need to be able to delete todos
+def delete_todo(index):
+    try:
+        todo_list.pop(index)
+    except IndexError:
+        print("Sorry, no todo at that index.")
 
 
+# delete_todo(0)
 
-
+print(todo_list)
 # print my todos
-
+for count, todo in enumerate(todo_list, 1):
+    print(f"{count}. {todo}")
+    
 # show user the main menu
 
 
